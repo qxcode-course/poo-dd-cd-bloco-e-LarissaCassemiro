@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_16-00-00",
+            "content": "from abc import ABC, abstractmethod\n\nclass Animal (ABC):\n    def __init__(self, nome: str) -> None:\n        self.nome = nome \n\n    def apresentar_nome(self, nome: str): \n        print(f\"eu sou {self.nome}\")\n\n    @abstractmethod\n    def fazer_som(self) -> None:\n        pass\n    @abstractmethod\n    def mover(self) -> None:\n        pass\n\n    \ndef apresentar(animal: Animal):\n    animal.fazer_som()\n    animal.mover()\n    animal.apresentar_nome()\n\nclass Leao(Animal):\n    def __init__(self, nome: str)-> None:\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"graaaam\")\n    def mover(self):\n        print(\"caminhando em silencio\")\n\n    def apresentar_nome(self, nome):\n        pass\n\nclass Elefante(Animal):\n    def __init__(self, nome: str)-> None:\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"fuuuur\")\n    def mover(self):\n        print(\"passos macios\")\n\n    def apresentar_nome(self, nome):\n        pass\n\n\nclass Cobra(Animal):\n    def __init__(self, nome: str)-> None:\n        super().__init__(nome)\n\n    def fazer_som(self):\n        print(\"sssss\")\n    def mover(self):\n        print(\"rastejaaando\")\n\n    def apresentar_nome(self, nome):\n        pass",
+            "lines": "58"
+        }
+    ]
+}
